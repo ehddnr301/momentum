@@ -9,7 +9,7 @@ const saveName = text => {
   localStorage.setItem(USER_LS, text);
 };
 
-const handleSubmit = event => {
+const handleGreetingSubmit = event => {
   event.preventDefault();
   const currentValue = input.value;
   paintGreeting(currentValue);
@@ -18,7 +18,7 @@ const handleSubmit = event => {
 
 const askForName = () => {
   form.classList.add(SHOWING_CN);
-  form.addEventListener("submit", handleSubmit);
+  form.addEventListener("submit", handleGreetingSubmit);
 };
 
 const paintGreeting = text => {
@@ -36,8 +36,8 @@ const loadName = () => {
   }
 };
 
-const init = () => {
+const initGreetings = () => {
   loadName();
 };
 
-init();
+initGreetings();
