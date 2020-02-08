@@ -13,7 +13,7 @@ function getWeather(lat, lng) {
     .then(function(json) {
       const temperature = json.main.temp;
       const place = json.name;
-      weather.innerText = `${temperature}/${place}`;
+      weather.innerText = `${temperature}＇𝇋 - ${place} person`;
     });
 }
 
@@ -33,7 +33,7 @@ function handleGeoSucces(position) {
 }
 
 function handleGeoError() {
-  console.log("Cant access geo location");
+  console.log("🔥Access Fail🔥");
 }
 
 function askForCoords() {
@@ -52,7 +52,6 @@ function loadCoords() {
 
 function weatherInit() {
   loadCoords();
-  console.log("hi");
 }
 
 weatherInit();
